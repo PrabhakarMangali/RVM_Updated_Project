@@ -26,6 +26,7 @@ public class PatientRegistrationPage extends Setup {
 	public void enterEmail(String val)
 	{
 		email.sendKeys(val);
+		
 	}
 	
 	@FindBy(xpath= "//input[@id='password-input']")
@@ -33,6 +34,7 @@ public class PatientRegistrationPage extends Setup {
 	public void enterPass(String val)
 	{
 		pass.sendKeys(val);
+		//sendKeys(email,val);
 	}
 	
 	@FindBy(xpath= "//button[@type='submit']")
@@ -159,6 +161,8 @@ public class PatientRegistrationPage extends Setup {
 		Thread.sleep(1000);
 	}
 	
+	//Skip verification
+	
 	@FindBy(xpath= "//a[text()='Skip Verification ?']")
 	WebElement skip;
 	public void SkipVer() throws InterruptedException
@@ -166,6 +170,7 @@ public class PatientRegistrationPage extends Setup {
 		skip.click();
 		Thread.sleep(1000);
 	}
+	
 	
 	//Doctors details
 	
